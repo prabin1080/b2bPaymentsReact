@@ -25,7 +25,8 @@ import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
-import DashboardPage from "views/Dashboard/Dashboard.js";
+import TransactionPage from "views/Transaction/Transaction.js";
+import OldDashboardPage from "views/OldDashboard/OldDashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
@@ -38,13 +39,21 @@ import RTLPage from "views/RTLPage/RTLPage.js";
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
+    path: "/transactions",
+    name: "Transactions",
     rtlName: "لوحة القيادة",
     icon: Dashboard,
-    component: DashboardPage,
+    component: TransactionPage,
     layout: "/admin"
   },
+  // {
+  //   path: "/old_dashboard",
+  //   name: "OldDashboard",
+  //   rtlName: "لوحة القيادة",
+  //   icon: Dashboard,
+  //   component: OldDashboardPage,
+  //   layout: "/admin"
+  // },
   {
     path: "/user",
     name: "User Profile",
@@ -91,22 +100,6 @@ const dashboardRoutes = [
     rtlName: "إخطارات",
     icon: Notifications,
     component: NotificationsPage,
-    layout: "/admin"
-  },
-  {
-    path: "/rtl-page",
-    name: "RTL Support",
-    rtlName: "پشتیبانی از راست به چپ",
-    icon: Language,
-    component: RTLPage,
-    layout: "/rtl"
-  },
-  {
-    path: "/upgrade-to-pro",
-    name: "Upgrade To PRO",
-    rtlName: "التطور للاحترافية",
-    icon: Unarchive,
-    component: UpgradeToPro,
     layout: "/admin"
   }
 ];
